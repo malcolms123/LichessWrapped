@@ -1,4 +1,4 @@
-### LICHESS WRAPPED (INCOMPLETE)
+# LICHESS WRAPPED (INCOMPLETE)
 
 ## PURPOSE
 I want to make a wrapped for lichess. Similar to spotify wrapped and chess.com wrapped. Could be a fun thing to see different stats on how I played chess this year. Also would've liked to see friends' wrapped and share w the community.
