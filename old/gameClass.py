@@ -1,10 +1,20 @@
 import json
+from openingHelper import findOpening
 
 class Game:
     def __init__(self, pgn, username):
         self.username = username
         self.color, self.opponent = self.determineColor(pgn)
         self.result = self.calculateResult(pgn)
+        self.variant = pgn.headers['Variant']
+        board = pgn.board()
+        self.moves = ''
+        for move in pgn.mainline_moves():
+            board.push(move)  # make the move on the board
+            # Append move in standard algebraic notation to the string
+            self.moves += board.san(move) + " "
+        self.moves = self.moves.strip()
+        self.opening = findOpening(pgn.headers['ECO'], pgn.mainline_moves())
 
     def determineColor(self, pgn):
         white = pgn.headers['White']

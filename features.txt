@@ -1,0 +1,38 @@
+Brainstorm:
+- top openings
+	- win rates
+	- how often played
+	- top % of players?
+- top time controls
+- top variants
+- should show things that are weird and unique
+- rating-history can show highest and lowest elo as well as improvement
+- can do some sort of improvement rate?
+- streak of days played
+- average games per day
+- games won
+- highest rated win
+- most commonly played opponent
+- most common time control
+
+
+first page
+- # games played
+- win/draw/loss display
+
+time control
+- you are a bullet player
+- specific favorite time control (% or count)
+
+color page
+- winrate with each color?
+
+Openings page
+- most common opening with each color
+- winrate or smthng like that
+
+
+Variants page
+- most common variant
+- number of games
+- something elo related
