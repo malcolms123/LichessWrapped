@@ -1,15 +1,18 @@
-import pgninterpreter, personalgame
+import pgninterpreter, personalgame, tqdm
 
-pgn_path = 'test.pgn'
+pgn_path = 'malcolms123.pgn'
 username = 'malcolms123'
 
 with open(pgn_path) as file:
     pgn_data = file.read()
 pgnGames = pgninterpreter.parse_pgn(pgn_data)
 
+print('a')
+
 personalGames = []
-for game in pgnGames:
+for game in tqdm.tqdm(pgnGames):
     personalGames.append(personalgame.PersonalGame(game, username))
+
 
 total_games = len(personalGames)
 total_wins = 0
@@ -55,7 +58,7 @@ for game in personalGames:
 
 print('-----PAGE ONE-----')
 print(f'{total_games} games played.')
-print(f'{total_wins}|{total_draws}|{total_losses}')
+print(f'{total_wins}|{total_draws}|{total_losses} ({round(100*total_wins/total_games,1)}% wins)')
 print('-----PAGE TWO-----')
 print('need to build time control logic')
 print('-----PAGE THREE-----')

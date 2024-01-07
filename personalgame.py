@@ -40,6 +40,8 @@ class PersonalGame:
             openings = json.load(file)
         ecoOpenings = openings.get(self.game.eco)
         gameOpenings = []
+        if ecoOpenings is None:
+            return gameOpenings
         for opening in ecoOpenings:
             openingMoves = opening.get('moves')
             if self.game.moves[0:len(openingMoves)] == openingMoves:
